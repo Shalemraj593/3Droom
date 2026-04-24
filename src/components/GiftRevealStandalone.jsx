@@ -137,7 +137,7 @@ export default function GiftRevealStandalone({ giftId, onClose, isLastGift, onSa
                       onClick={() => {
                          if (isClosing) return;
                          setIsClosing(true);
-                         onClose();
+                         onClose(false); // Bypassed
                       }}
                       className={`reveal-return-btn ${isUltimate ? 'ultimate-btn' : 'standard-btn'}`}
                    >
@@ -157,7 +157,7 @@ export default function GiftRevealStandalone({ giftId, onClose, isLastGift, onSa
                               if (isClosing) return;
                               setIsClosing(true);
                               if (onBypassCapture) onBypassCapture();
-                              onClose();
+                              onClose(false); // Bypassed
                            }}
                            className={`reveal-return-btn standard-btn`}
                            style={{ marginTop: '15px', background: 'transparent', border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.8)' }}
@@ -180,12 +180,12 @@ export default function GiftRevealStandalone({ giftId, onClose, isLastGift, onSa
               if (isClosing) return;
               setIsClosing(true);
               if (onSaveMemory) onSaveMemory(giftId, base64);
-              onClose();
+              onClose(true); // Captured
             }}
             onCancel={() => {
               if (isClosing) return;
               setIsClosing(true);
-              onClose();
+              onClose(false); // Bypassed
             }}
           />
         )}

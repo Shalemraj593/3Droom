@@ -224,20 +224,20 @@ export default function App() {
             key="reveal-standalone"
             giftId={selectedRevealGift}
             isLastGift={selectedRevealGift === 'Gift11'}
-            onClose={() => {
+            onClose={(goToCollage) => {
               // Determine progression BEFORE exiting
               if (!isSandboxMode) {
                 if (targetSequenceIndex === 11) {
                   setIsSandboxMode(true);
-                  setUnlockedGifts([]);
+                  // Don't clear unlockedGifts so they stay open in Sandbox!
                 } else {
                   setUnlockedGifts(prev => [...prev, selectedRevealGift]);
                   setTargetSequenceIndex(prev => prev + 1);
                 }
               }
 
-              // Navigate to collage after the 11th gift is completed (captured or bypassed)
-              if (targetSequenceIndex === 11 && !isSandboxMode) {
+              // Navigate to collage ONLY if it was the 11th gift AND a photo was captured
+              if (targetSequenceIndex === 11 && !isSandboxMode && goToCollage) {
                  setCurrentPage('collage');
               } else {
                  setCurrentPage('gifts');
