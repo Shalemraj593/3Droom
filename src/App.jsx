@@ -225,23 +225,22 @@ export default function App() {
             giftId={selectedRevealGift}
             isLastGift={selectedRevealGift === 'Gift11'}
             onClose={(goToCollage) => {
-              // Determine progression BEFORE exiting
-              if (!isSandboxMode) {
-                if (targetSequenceIndex === 11) {
-                  setIsSandboxMode(true);
-                  // Don't clear unlockedGifts so they stay open in Sandbox!
-                } else {
-                  setUnlockedGifts(prev => [...prev, selectedRevealGift]);
-                  setTargetSequenceIndex(prev => prev + 1);
-                }
+              const isFinalCompletion = (targetSequenceIndex === 11) && !isSandboxMode;
+
+              if (isFinalCompletion) {
+                setIsSandboxMode(true);
+              } else if (!isSandboxMode) {
+                setUnlockedGifts(prev => [...prev, selectedRevealGift]);
+                setTargetSequenceIndex(prev => prev + 1);
               }
 
               // Navigate to collage ONLY if it was the 11th gift AND a photo was captured
-              if (targetSequenceIndex === 11 && !isSandboxMode && goToCollage) {
+              if (isFinalCompletion && goToCollage === true) {
                  setCurrentPage('collage');
               } else {
                  setCurrentPage('gifts');
               }
+              
               setSelectedRevealGift(null);
             }}
             isCaptureBypassed={isCaptureBypassed}
