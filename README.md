@@ -28,29 +28,37 @@ Users must find **11 specific gifts** hidden within a 3D gallery.
 ### 4. Interactive Reveal & Capture Mode (The Memories)
 When a gift is found:
 - **3D Reveal**: The specific gift (e.g., Balloons, Phone, Jewelry) appears in a cinematic standalone 3D view.
-- **Capture Mode**: Users are encouraged to use their **Webcam** to take a photo of themselves with the gift (Virtual + Real unboxing).
-- **Return vs. Capture**: Users can choose to "Capture Moment" (saves to collage) or "Return to Gallery" (skips capture).
+- **Capture Mode**: Users are encouraged to use their **Webcam** to take a photo of yourself with the gift.
 
-### 5. The Heart Collage & Final Reveal (The Conclusion)
-- **Automatic Collage**: All captured photos are automatically arranged into a beautiful **Rectangular Memory Grid**.
-- **Signature & Save**: Users can see their journey's summary and download the memory frame.
-- **Thank You Screen**: The journey ends with a premium "Thank You" screen featuring a special message and the "Visit Again" invitation.
+### 5. Square Memory Collage & Final Reveal (The Conclusion)
+- **Square Collage**: All captured photos are automatically arranged into a sleek **Square Memory Grid**.
+- **Final Reveal**: The journey ends with a premium "Thank You" screen featuring the `Thanks.jpg` image and a special "Visit Again" message.
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend**: React.js, Vite
-- **3D Engine**: React Three Fiber (Three.js), @react-three/drei
-- **Animations**: Framer Motion, GSAP
-- **Styling**: Vanilla CSS (Premium Dark Theme)
+## 🛠️ Technical Customization Guide
+
+### 📸 How to Change Interactive Pictures
+In the `RoomExperience.jsx` file, I have implemented placeholder addresses for the character popups. To use your own images:
+1. Locate the `characterMessages` object in `src/components/RoomExperience.jsx`.
+2. Find the `image` fields labeled as **`Temppic1`**, **`Temppic2`**, and **`Temppic3`**.
+3. Replace these strings with your actual image paths (e.g., `/images/myphoto.jpg`).
+
+### ⏳ How to Update the Countdown
+To change the date when the experience opens:
+1. Open `src/App.jsx`.
+2. Look for the **`TARGET_DATE`** constant (e.g., `new Date('2026-04-12T12:00:00')`).
+3. Update it to your desired date and time. The countdown will automatically adjust!
+
+### 🎨 Custom 3D Models (Blender Optimized)
+All 3D assets in this project (Room, Gifts, Boxes) were custom-designed in **Blender**.
+- **Optimized for Web**: Models are exported as high-performance `.glb` files with compressed geometry to ensure fast loading times.
+- **Custom Lighting**: All meshes are configured with custom materials and UV mapping to react realistically to the React-Three-Fiber lighting engine.
+- **Dynamic Items**: The `11Newgifts.glb` contains distinct sub-meshes that are dynamically loaded to provide a unique reveal for every gift.
 
 ---
 
 ## 💻 How to Access & Run Locally
-
-### Prerequisites
-- Node.js (v16 or higher)
-- A modern browser with WebGL support
 
 ### Setup Steps
 1. **Clone the Repository**:
@@ -65,15 +73,6 @@ When a gift is found:
    ```bash
    npm run dev
    ```
-4. **Open in Browser**:
-   Navigate to `http://localhost:5173/` to start the experience.
-
----
-
-## 📁 Important Folders
-- `/public/models/`: Contains all custom `.glb` 3D models and textures.
-- `/src/components/`: Core interactive components (Room, GiftsPage, Reveal, Collage).
-- `/src/App.jsx`: Main application logic and navigation flow.
 
 ---
 
