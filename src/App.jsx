@@ -20,10 +20,10 @@ function CountdownOverlay({ timeLeft }) {
       color: '#fff', fontFamily: "'Montserrat', sans-serif", zIndex: 99999
     }}>
       <h1 style={{ fontSize: '3rem', marginBottom: '15px', letterSpacing: '4px', textTransform: 'uppercase', color: '#ffb3b6', textAlign: 'center' }}>
-        Experience Opening Soon
+        Something Special is Coming...
       </h1>
       <p style={{ fontSize: '1.2rem', marginBottom: '50px', opacity: 0.8, textAlign: 'center', maxWidth: '600px', lineHeight: '1.6', padding: '0 20px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit tempus.
+        The virtual doors are almost open. Get ready for a journey of discovery, surprises, and beautiful memories. Stay tuned!
       </p>
       
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -70,7 +70,7 @@ export default function App() {
   }, []);
   
   // --- TEMPORARY COUNTDOWN LOGIC ---
-  const TARGET_DATE = new Date('2026-04-12T12:00:00'); // Set specifically to 12 PM
+  const TARGET_DATE = new Date('2026-12-31T00:00:00'); // Set to far future for active countdown
   const calculateTimeLeft = () => {
     const difference = TARGET_DATE - new Date();
     if (difference <= 0) return null;

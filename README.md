@@ -34,6 +34,11 @@ When a gift is found:
 - **Square Collage**: All captured photos are automatically arranged into a sleek **Square Memory Grid**.
 - **Final Reveal**: The journey ends with a premium "Thank You" screen featuring the `Thanks.jpg` image and a special "Visit Again" message.
 
+### ⏳ Countdown Page Preview
+![Countdown Page Preview](./public/images/countdown_preview.png)
+
+*When the project is accessed before the launch date, users see this premium, dark-themed countdown timer.*
+
 ---
 
 ## 🛠️ Technical Customization Guide
