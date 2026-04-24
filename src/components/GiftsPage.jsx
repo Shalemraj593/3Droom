@@ -79,7 +79,7 @@ function FadingBox({ isFading }) {
 }
 
 // Powerfully manages native 3D Game interactions and cinematic reveals
-function InteractiveGiftsScene({ visible, activeGuessBox, revealedBox, onBoxClick, unlockedGifts }) {
+function InteractiveGiftsScene({ visible, activeGuessBox, revealedBox, onBoxClick, unlockedGifts, isSandboxMode }) {
   const { scene: newItemsScene } = useGLTF('./models/11Newgifts.glb');
 
   // Safely clone the ENTIRE scene and its materials so we don't corrupt the cached GLTF across remounts!
