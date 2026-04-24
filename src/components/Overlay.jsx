@@ -163,7 +163,7 @@ export function Overlay({ isOpen, setIsOpen, setCurrentPage }) {
           marginTop: '10px',
           fontWeight: 300
         }}>
-          Lorem ipsum dolor sit amet consectetur
+          Unbox the magic hidden within the virtual world.
         </p>
       </header>
 

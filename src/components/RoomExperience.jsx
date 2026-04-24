@@ -27,18 +27,18 @@ function EnvelopeOverlay({ character, onClose, theme }) {
     if (!char) return { title: "", text: "", img: "" };
     const name = char.toLowerCase();
     if (name.includes('panda')) return { 
-        title: "Lorem Ipsum Panda",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        title: "The Gentle Giant",
+        text: "Panda says: Even the biggest adventures start with a small, gentle step. Enjoy your journey through this room!",
         img: "Temppic1"
     };
     if (name.includes('bunny')) return {
-        title: "Dolor Sit Bunny", 
-        text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+        title: "The Playful Hop", 
+        text: "Bunny says: Life is full of hops and jumps! Keep your spirit high and find all the hidden treasures I've tucked away.",
         img: "Temppic2"
     };
     if (name.includes('happysad')) return {
-        title: "Amet Consectetur",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.",
+        title: "A World of Emotions",
+        text: "Happysad says: It's okay to feel everything at once! Every emotion adds a new color to your beautiful story.",
         img: "Temppic3"
     };
     return {
