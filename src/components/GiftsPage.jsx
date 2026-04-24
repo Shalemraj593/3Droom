@@ -134,7 +134,7 @@ function InteractiveGiftsScene({ visible, activeGuessBox, revealedBox, onBoxClic
         }
 
         // 3. DISCOVERED MODE: If they already collected it, it permanently vanishes.
-        else if (unlockedGifts.includes(child.name)) {
+        else if (!isSandboxMode && unlockedGifts.includes(child.name)) {
           child.visible = false;
         }
 
@@ -207,7 +207,7 @@ export function GiftsPage({
   // If the user is returning from a standalone reveal, the box has logically already been opened!
   const hasGameStarted = unlockedGifts.length > 0 || targetSequenceIndex > 1 || isSandboxMode;
   const [viewState, setViewState] = useState(hasGameStarted ? 'items' : 'box');
-  const [showInteractiveItems, setShowInteractiveItems] = useState(hasGameStarted);
+  const [showInteractiveItems, setShowInteractiveItems] = useState(true); // Always show items for now to avoid race conditions
   const [showGift5Popup, setShowGift5Popup] = useState(false);
 
   // Game States!
@@ -530,7 +530,7 @@ export function GiftsPage({
                     letterSpacing: '0.5px'
                   }}
                 >
-                  (Lorem ipsum dolor sit amet consectetur)
+                  (Explore all your unlocked surprises below)
                 </motionDOM.p>
               </motionDOM.div>
             )}
@@ -570,6 +570,7 @@ export function GiftsPage({
                     revealedBox={revealedBox}
                     onBoxClick={handleBoxClick}
                     unlockedGifts={unlockedGifts}
+                    isSandboxMode={isSandboxMode}
                   />
 
                   {/* Only render the sinking box if the game has not already been opened before */}
