@@ -440,7 +440,7 @@ function IntroGiftBox({ onStart, theme, isLocked, isLoaded, portal }) {
 function DynamicRoomModel({ onStart, theme, isLocked, setIsLocked, setZoomTarget, doorPos, setActiveEnvelope }) {
   const roomRef = useRef();
   const scroll = useScroll();
-  const { scene } = useGLTF('/models/Newroom.glb');
+  const { scene } = useGLTF('./models/Newroom.glb');
   const [lightsConfigured, setLightsConfigured] = useState(false);
 
   // ONE-TIME initialization to prevent massive lag during theme swaps!

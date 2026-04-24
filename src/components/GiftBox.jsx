@@ -4,9 +4,9 @@ import { useFrame } from '@react-three/fiber';
 import { motion } from 'framer-motion-3d';
 
 export function GiftBox({ isOpen, setIsOpen }) {
-  const boxModel = useGLTF('/models/Boxnew.glb');
-  const lidModel = useGLTF('/models/lidnew.glb');
-  const itemsModel = useGLTF('/models/11boxesnew.glb');
+  const boxModel = useGLTF('./models/Boxnew.glb');
+  const lidModel = useGLTF('./models/lidnew.glb');
+  const itemsModel = useGLTF('./models/11boxesnew.glb');
 
   const groupRef = useRef();
 
@@ -54,6 +54,6 @@ export function GiftBox({ isOpen, setIsOpen }) {
   );
 }
 
-useGLTF.preload('/models/Boxnew.glb');
-useGLTF.preload('/models/lidnew.glb');
-useGLTF.preload('/models/11boxesnew.glb');
+useGLTF.preload('./models/Boxnew.glb');
+useGLTF.preload('./models/lidnew.glb');
+useGLTF.preload('./models/11boxesnew.glb');

@@ -23,7 +23,7 @@ function getGameData(originalName) {
 
 // 3D Model logic isolated for a single item
 function IsolatedRevealModel({ giftId }) {
-  const { scene } = useGLTF(`/models/${giftId}.glb`); // Dynamically load specific 2KB GLB to prevent WebGL exhaustion!
+  const { scene } = useGLTF(`./models/${giftId}.glb`); // Dynamically load specific 2KB GLB to prevent WebGL exhaustion!
   
   // Clone the entire scene to prevent mutating the cached version
   const clonedScene = useMemo(() => {
@@ -196,5 +196,5 @@ export default function GiftRevealStandalone({ giftId, onClose, isLastGift, onSa
 }
 
 ['Gift1', 'Gift2', 'Gift3', 'Gift4', 'Gift5', 'Gift6', 'Gift7', 'Gift8', 'Gift9', 'Gift10', 'Gift11'].forEach(id => {
-  useGLTF.preload(`/models/${id}.glb`);
+  useGLTF.preload(`./models/${id}.glb`);
 });

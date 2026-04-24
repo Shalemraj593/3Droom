@@ -43,7 +43,7 @@ function getGameData(originalName) {
 
 // Component that handles the Box gracefully fading and sinking away
 function FadingBox({ isFading }) {
-  const { scene } = useGLTF('/models/Boxnew.glb');
+  const { scene } = useGLTF('./models/Boxnew.glb');
 
   const clonedScene = useMemo(() => {
     const cloned = scene.clone();
@@ -80,7 +80,7 @@ function FadingBox({ isFading }) {
 
 // Powerfully manages native 3D Game interactions and cinematic reveals
 function InteractiveGiftsScene({ visible, activeGuessBox, revealedBox, onBoxClick, unlockedGifts }) {
-  const { scene: newItemsScene } = useGLTF('/models/11Newgifts.glb');
+  const { scene: newItemsScene } = useGLTF('./models/11Newgifts.glb');
 
   // Safely clone the ENTIRE scene and its materials so we don't corrupt the cached GLTF across remounts!
   const safeScene = useMemo(() => {
@@ -222,7 +222,7 @@ export function GiftsPage({
 
   const [feedbackMsg, setFeedbackMsg] = useState('');
 
-  const { scene: oldItemsScene } = useGLTF('/models/11boxesnew.glb');
+  const { scene: oldItemsScene } = useGLTF('./models/11boxesnew.glb');
 
   // Clean up any inverted normal holes on the starting cluster as well
   useMemo(() => {

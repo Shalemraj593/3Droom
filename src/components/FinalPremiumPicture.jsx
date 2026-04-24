@@ -39,7 +39,7 @@ export default function FinalPremiumPicture({ onClose }) {
         }}
       >
         <img 
-          src="/models/Thanks.jpg" 
+          src="./models/Thanks.jpg" 
           alt="Thank You" 
           style={{
             maxWidth: '90vw',
