@@ -224,11 +224,14 @@ export function GiftsPage({
 
   const { scene: oldItemsScene } = useGLTF('./models/11boxesnew.glb');
 
-  // Clean up any inverted normal holes on the starting cluster as well
+  // Clean up any inverted normal holes and enable FRUSTUM CULLING for performance!
   useMemo(() => {
     oldItemsScene.traverse((child) => {
-      if (child.isMesh && child.material) {
-        child.material.side = THREE.DoubleSide;
+      if (child.isMesh) {
+        child.frustumCulled = true; // Optimization
+        if (child.material) {
+          child.material.side = THREE.DoubleSide;
+        }
       }
     });
   }, [oldItemsScene]);

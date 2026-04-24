@@ -30,10 +30,13 @@ function IsolatedRevealModel({ giftId }) {
     const cloned = scene.clone();
     
     cloned.traverse((child) => {
-      if (child.isMesh && child.material) {
-        // Fix inverted normals permanently for all internal sub-meshes
-        child.material = child.material.clone();
-        child.material.side = THREE.DoubleSide;
+      if (child.isMesh) {
+        child.frustumCulled = true; // High performance optimization
+        if (child.material) {
+          // Fix inverted normals permanently for all internal sub-meshes
+          child.material = child.material.clone();
+          child.material.side = THREE.DoubleSide;
+        }
       }
     });
     
