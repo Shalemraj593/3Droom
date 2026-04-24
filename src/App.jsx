@@ -70,7 +70,7 @@ export default function App() {
   }, []);
   
   // --- TEMPORARY COUNTDOWN LOGIC ---
-  const TARGET_DATE = new Date('2026-12-31T00:00:00'); // Set to far future for active countdown
+  const TARGET_DATE = new Date('2026-04-24T19:11:00'); // Set to current time to open the experience
   const calculateTimeLeft = () => {
     const difference = TARGET_DATE - new Date();
     if (difference <= 0) return null;
