@@ -101,6 +101,7 @@ function InteractiveGiftsScene({ visible, activeGuessBox, revealedBox, onBoxClic
         child.userData.baseScaleZ = child.scale.z;
 
         child.userData.isInteractiveItem = true;
+        child.frustumCulled = false; // CRITICAL FIX: Prevents sudden disappearing!
       }
     });
     return clone;
@@ -228,7 +229,7 @@ export function GiftsPage({
   useMemo(() => {
     oldItemsScene.traverse((child) => {
       if (child.isMesh) {
-        child.frustumCulled = true; // Optimization
+        child.frustumCulled = false; // CRITICAL FIX: Prevent random vanishing
         if (child.material) {
           child.material.side = THREE.DoubleSide;
         }

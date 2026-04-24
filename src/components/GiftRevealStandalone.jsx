@@ -31,7 +31,7 @@ function IsolatedRevealModel({ giftId }) {
     
     cloned.traverse((child) => {
       if (child.isMesh) {
-        child.frustumCulled = true; // High performance optimization
+        child.frustumCulled = false; // CRITICAL FIX: Prevent random vanishing
         if (child.material) {
           // Fix inverted normals permanently for all internal sub-meshes
           child.material = child.material.clone();
