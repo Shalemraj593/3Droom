@@ -30,9 +30,24 @@ When a gift is found:
 - **3D Reveal**: The specific gift (e.g., Balloons, Phone, Jewelry) appears in a cinematic standalone 3D view.
 - **Capture Mode**: Users are encouraged to use their **Webcam** to take a photo of yourself with the gift.
 
-### 5. Square Memory Collage & Final Reveal (The Conclusion)
-- **Square Collage**: All captured photos are automatically arranged into a sleek **Square Memory Grid**.
-- **Final Reveal**: The journey ends with a premium "Thank You" screen featuring the `Thanks.jpg` image and a special "Visit Again" message.
+### 5. Memory Collage Mode (The Keepsake)
+Once the final gift is revealed and the moment is captured, the experience culminates in the **Memory Collage**.
+- **The Grid**: All 11 captured memories are elegantly displayed in a premium grid layout.
+- **Preservation**: This mode allows you to see the entire journey at a glance, reflecting on each gift and your reaction to it.
+- **Saving**: Users can use the "Save This Memory Frame" button to preserve their personalized collage forever.
+
+### 6. Free Mode / Sandbox Mode (The After-Party)
+Completing the 11th gift unlocks **Free Mode**, removing all sequential restrictions.
+- **Open Exploration**: Every gift box in the gallery becomes instantly accessible.
+- **Unlimited Replay**: You can re-reveal any gift, re-watch the animations, and explore the 3D room without any pressure.
+- **Digital Gallery**: The app effectively becomes a permanent digital museum of your special day.
+
+---
+
+### 📸 Visual Previews
+#### Collage Mode & Free Mode
+> [!NOTE]
+> *Previews coming soon! These modes feature high-end 3D transitions and a polished, emotional UI.*
 
 ### ⏳ Countdown Page Preview
 ![Countdown Page Preview](./public/images/countdown_preview.png)
