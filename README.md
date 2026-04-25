@@ -41,6 +41,13 @@ When a gift is found:
 
 ---
 
+## 📱 Device Compatibility & Mobile Fallback
+This experience is highly intensive and relies on high-end 3D rendering (WebGL) to provide a premium visual journey. 
+- **Desktop Optimization**: The 3D room, complex lighting, and interactive unboxing are best experienced on a Desktop or Laptop.
+- **Mobile Fallback**: To ensure a consistent experience, a graceful fallback screen is implemented for mobile devices, informing users that the experience is optimized for larger screens and encouraging them to switch devices for the full immersion.
+
+---
+
 ## 🛠️ Technical Customization Guide
 
 ### 📸 How to Change Interactive Pictures

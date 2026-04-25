@@ -351,11 +351,11 @@ export function GiftsPage({
               letterSpacing: '-1px'
             }}
           >
-            {viewState === 'box' ? "Wow!! Box lid open chesavV" :
-              revealedBox && targetSequenceIndex > 11 ? "🎉 Lorem Ipsum Dolor!" :
-                revealedBox ? "Sit Amet Consectetur!" :
-                  isSandboxMode ? "Lorem Ipsum Collection" :
-                    targetSequenceIndex === 11 ? "🎁 Lorem Ipsum!" :
+            {viewState === 'box' ? "The Gift Box is Open!" :
+              revealedBox && targetSequenceIndex > 11 ? "🎉 All Secrets Uncovered!" :
+                revealedBox ? "A Special Discovery!" :
+                  isSandboxMode ? "Your Birthday Collection" :
+                    targetSequenceIndex === 11 ? "🎁 The Final Mystery!" :
                       `Find Gift ${targetSequenceIndex}!`}
           </motionDOM.h1>
 
@@ -364,7 +364,7 @@ export function GiftsPage({
               animate={{ opacity: 1 }}
               style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', marginTop: '10px' }}
             >
-              {viewState === 'box' ? "Late enti mari lopala em undo chuduuu" :
+              {viewState === 'box' ? "Step inside to discover all your birthday surprises." :
                 isSandboxMode ? "You found them all! Click any box to view it." :
                   ""}
             </motionDOM.p>
@@ -455,7 +455,7 @@ export function GiftsPage({
                     <p style={{ color: 'rgba(255,215,0,0.7)', margin: '8px 0 0 0', fontSize: '1rem' }}>Find it to complete the collection!</p>
                   </div>
                 ) : !feedbackMsg && isSandboxMode ? (
-                  <p style={{ color: '#4ade80', margin: 0, fontSize: '1.4rem', fontWeight: 'bold' }}>Lorem ipsum dolor sit! Enjoy Free Mode.</p>
+                  <p style={{ color: '#4ade80', margin: 0, fontSize: '1.4rem', fontWeight: 'bold' }}>You've unlocked everything! Enjoy exploring your gifts.</p>
                 ) : (
                   <h3 style={{ color: feedbackMsg.includes('Oops') ? '#f87171' : '#ffeb3b', margin: 0, fontSize: '1.4rem', fontWeight: 600 }}>{feedbackMsg}</h3>
                 )}
@@ -633,7 +633,7 @@ export function GiftsPage({
                   marginBottom: '20px',
                   lineHeight: '1.4'
                 }}>
-                   Lorem Ipsum Dolor Sit Amet Consectetur
+                   A Special Moment Awaits
                 </h2>
                 
                 <button

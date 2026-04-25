@@ -136,7 +136,7 @@ export default function App() {
         </svg>
         <h2 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px' }}>Desktop Only</h2>
         <p style={{ fontSize: '16px', lineHeight: '1.6', opacity: 0.8, maxWidth: '400px' }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          This experience is optimized for larger screens to provide the best possible visual journey. Please switch to a desktop or laptop to continue.
         </p>
       </div>
     );
